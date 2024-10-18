@@ -1,0 +1,72 @@
+body {
+    height: 97.5vh;
+
+    display: grid;
+
+    background-color: black;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 10% 10% 80%;
+}
+
+.title {
+    margin: 0.05%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    text-align: center;
+    color: white;
+}
+
+.settings {
+    grid-row: 2;
+    margin: 0.05%;
+
+    display: flex;
+}
+.settingButtons { 
+    margin-left: 3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    color: white;
+}
+.settingButtons label {
+    height: 0.1rem;    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: gray;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+#resolutionEntry {
+    background-color: transparent;
+    cursor: auto;
+}
+#resolutionInputs input {
+    width: 30%;
+}
+#resolutionInputs p {
+    display: inline;
+}
+
+.frame {
+    margin: 0.05%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 5px darkgray;
+    color: white;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport">
+        <link href="CSS/index.css" rel="stylesheet">
+        <script src="JS/index.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                <h1 id="videoLabel">Video: -</h1>
+            </div>
+
+            <div class="settings">
+                <form class="settingButtons">
+                    <label for="fileInput">Choose File</label>
+                    <input id="fileInput" type="file" accept="video/*" hidden/>
+                </form>
+                <div class="settingButtons">
+                    <label for="playButton">Play/Pause Video</label>
+                    <button id="playButton" onclick="playVideo()" hidden></button>
+                </div>
+                <div class="settingButtons">
+                    <label for="resetButton">Reset Video</label>
+                    <button id="resetButton" onclick="setupVideo(true)" hidden></button>
+                </div>
+                <div class="settingButtons">
+                    <label for="invertButton">Invert Colours</label>
+                    <button id="invertButton" onclick="if (inverted) {inverted = false;} else {inverted = true;}" hidden></button>
+                </div>
+                <div class="settingButtons">
+                    <label id="resolutionEntry" for="resolutionInputs">
+                        Enter frame resolution in characters (0 x 0 for auto): 
+                    </label>
+                    <div id="resolutionInputs">
+                        <input id="widthInput" type="number" min="0" value="0"/>
+                        <p>x</p>
+                        <input id="heightInput" type="number" min="0" value="0"/>
+                    </div>
+                    <label for="updateButton">Update</label>
+                    <button id="updateButton" onclick="setResolution(true)" hidden></button>
+                </div>
+            </div>
+
+            <div id="frameBox" class="frame">
+                <pre id="frameText">No Video</pre>
+            </div>
+        </div>
+    </body>
+</html>
