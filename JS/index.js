@@ -197,6 +197,7 @@ function handleFileUpload(event) {
       videoURL = fileInput;
     } else {
       videoURL = URL.createObjectURL(fileInput);
+      fileInput = fileInput["name"];
     }
     videoName = fileInput.substring(
       0,
