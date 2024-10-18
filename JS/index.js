@@ -1,7 +1,7 @@
 // Constants
 const DISPLAY_BLOCK = "█";
 const EMPTY_BLOCK = " ";
-const DEFAULT_VIDEO = "videos/Bad Apple (Default).mp4";
+const DEFAULT_VIDEO = "videos/Bad Apple.mp4";
 const COLOUR_THRESHOLD = 128;
 const FRAME_RATE = 30;
 const MAX_LOAD_TIME = 10;
