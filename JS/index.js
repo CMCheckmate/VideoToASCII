@@ -195,14 +195,13 @@ function handleFileUpload(event) {
     let videoName = "-";
     if (fileInput == DEFAULT_VIDEO) {
       videoURL = fileInput;
-      videoName = fileInput.substring(
-        0,
-        fileInput.length - fileInput.split("").reverse().indexOf(".") - 1
-      );
     } else {
       videoURL = URL.createObjectURL(fileInput);
-      videoName = fileInput.name.match(/^[^.]+/);
     }
+    videoName = fileInput.substring(
+      0,
+      fileInput.length - fileInput.split("").reverse().indexOf(".") - 1
+    );
     video.src = videoURL;
     playState = "loading";
 
